@@ -18,7 +18,7 @@ import (
 
 type Config struct {
 	pgfc.Config
-	URIArgName string `long:"uri_arg_name" default:"id" description:"Argument placed in URI"`
+	// URIArgName string `long:"uri_arg_name" default:"id" description:"Argument placed in URI"`
 }
 
 type Server struct {
