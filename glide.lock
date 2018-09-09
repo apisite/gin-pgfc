@@ -1,0 +1,50 @@
+hash: 63b6c3e7ee4e6b8425691cd147af039ba583eb7c5ff0451cdbb6810521ba3d99
+updated: 2018-09-09T20:07:30.845637375+03:00
+imports:
+- name: github.com/apisite/pgfc
+  version: e6e03ae856d170f5d61238e4fdc88e4debe0b23e
+- name: github.com/gin-contrib/sse
+  version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
+- name: github.com/gin-gonic/gin
+  version: 500ebd9ea866c57427aeaddc31f374adedd4084b
+  subpackages:
+  - binding
+  - internal/json
+  - render
+- name: github.com/golang/protobuf
+  version: 925541529c1fa6821df4e44ce2723319eb2be768
+  subpackages:
+  - proto
+- name: github.com/jackc/pgx
+  version: e44f0f24c4bb7e7fcfaa6057497e0a61d27d5eac
+  subpackages:
+  - chunkreader
+  - internal/sanitize
+  - pgio
+  - pgproto3
+  - pgtype
+- name: github.com/json-iterator/go
+  version: 1624edc4454b8682399def8740d46db5e4362ba4
+- name: github.com/mattn/go-isatty
+  version: 3fb116b820352b7f0c281308a4d6250c22d94e27
+- name: github.com/modern-go/concurrent
+  version: bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
+- name: github.com/modern-go/reflect2
+  version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
+- name: github.com/ugorji/go
+  version: e253f1f20942cb6dc505e504e8bbba4b7f434cb2
+  subpackages:
+  - codec
+- name: golang.org/x/sys
+  version: 7dca6fe1f43775aa6d1334576870ff63f978f539
+  subpackages:
+  - unix
+- name: gopkg.in/birkirb/loggers.v1
+  version: 2ec57cf2e3a4b2ca1a497e98e3f95741755ef550
+- name: gopkg.in/go-playground/validator.v8
+  version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
+- name: gopkg.in/yaml.v2
+  version: 7f97868eec74b32b0982dd158a51a446d1da7eb5
+testImports: []
