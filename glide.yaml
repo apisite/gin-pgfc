@@ -1,0 +1,9 @@
+package: github.com/apisite/gin-pgfc
+import:
+- package: github.com/apisite/pgfc
+- package: github.com/gin-gonic/gin
+  subpackages:
+  - binding
+- package: github.com/jackc/pgx
+- package: github.com/pkg/errors
+- package: gopkg.in/birkirb/loggers.v1
