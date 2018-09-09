@@ -13,6 +13,8 @@ import (
 	"github.com/gin-gonic/gin/binding"
 	"gopkg.in/birkirb/loggers.v1"
 
+	"github.com/jackc/pgx"
+
 	"github.com/apisite/pgfc"
 )
 
@@ -26,9 +28,9 @@ type Server struct {
 	config Config
 }
 
-func NewServer(cfg Config, log loggers.Contextual, uri string) (*Server, error) {
+func NewServer(cfg Config, log loggers.Contextual, uri string, dbh *pgx.ConnPool) (*Server, error) {
 
-	srv, err := pgfc.NewServer(cfg.Config, log, uri)
+	srv, err := pgfc.NewServer(cfg.Config, log, uri, dbh)
 	if err != nil {
 		return nil, err
 	}
