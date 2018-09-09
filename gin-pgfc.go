@@ -18,16 +18,19 @@ import (
 	"github.com/apisite/pgfc"
 )
 
+// Config holds package config vars
 type Config struct {
 	pgfc.Config
 	// URIArgName string `long:"uri_arg_name" default:"id" description:"Argument placed in URI"`
 }
 
+// Server holds pgfc server
 type Server struct {
 	*pgfc.Server
 	config Config
 }
 
+// NewServer returns pgfc server object
 func NewServer(cfg Config, log loggers.Contextual, uri string, dbh *pgx.ConnPool) (*Server, error) {
 
 	srv, err := pgfc.NewServer(cfg.Config, log, uri, dbh)
@@ -38,6 +41,7 @@ func NewServer(cfg Config, log loggers.Contextual, uri string, dbh *pgx.ConnPool
 	return &Server{Server: srv, config: cfg}, nil
 }
 
+// Route registers supported locations in gin
 func (srv *Server) Route(prefix string, r *gin.Engine) error {
 	uri := prefix + "/:method"
 	r.GET(uri, srv.handler(binding.Query))
@@ -45,6 +49,7 @@ func (srv *Server) Route(prefix string, r *gin.Engine) error {
 	return nil
 }
 
+// handler handles location request
 func (srv *Server) handler(bind binding.Binding) gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		name := ctx.Param("method")
@@ -85,6 +90,7 @@ func (srv *Server) handler(bind binding.Binding) gin.HandlerFunc {
 	}
 }
 
+// SetFuncBlank appends function templates and not related to request functions to funcs
 func (srv *Server) SetFuncBlank(funcs template.FuncMap) {
 
 	funcs["makeSlice"] = func(param ...interface{}) interface{} {
@@ -112,6 +118,7 @@ func (srv *Server) SetFuncBlank(funcs template.FuncMap) {
 	}
 }
 
+// SetFuncRequest appends related to request functions to funcs
 func (srv *Server) SetFuncRequest(funcs template.FuncMap, ctx *gin.Context) {
 	funcs["param"] = func(key string) string { return ctx.Param(key) } // TODO: use original
 	funcs["api"] = func(method string, dict ...interface{}) (interface{}, error) {
@@ -139,6 +146,7 @@ func (srv *Server) SetFuncRequest(funcs template.FuncMap, ctx *gin.Context) {
 	}
 }
 
+// MakeMap makes a map from key,value pairs
 func MakeMap(args ...interface{}) (*map[string]interface{}, error) {
 	if len(args) == 1 {
 		// already map
