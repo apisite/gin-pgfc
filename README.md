@@ -1,5 +1,5 @@
 # gin-pgfc
-> golang package for postgresql functions calling
+> [pgfc](https://github.com/apisite/pgfc) postgresql functions calling middleware for [Gin](https://gin-gonic.github.io/gin/)
 
 [![GoCard][gc1]][gc2]
  [![GitHub Release][gr1]][gr2]
