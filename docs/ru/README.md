@@ -21,7 +21,7 @@
 
 * Статус проекта: Реализован концепт
 
-[gin-pgfc] - golang библиотека для использования pgfc в проектах на gin-gonic/
+[gin-pgfc] - golang библиотека для использования [pgfc](https://github.com/apisite/pgfc) в проектах на gin-gonic/
 
 ## Использование
 
@@ -53,8 +53,15 @@
 ```
 ## См. также
 
-* pgfc - golang библиотека для вызова хранимых функций postgresql
+* [pgfc](https://github.com/apisite/pgfc) - golang библиотека для вызова хранимых функций postgresql
 * enfist - пример готового приложения
+
+## Похожие проекты
+
+Есть много возможностей предоставить доступ к БД внешнему клиенту (в т.ч. клиенту на javascript). Ниже перечислены самые популярные, если знаете других, напишите нам и мы добавим:
+
+* [postgrest](https://github.com/PostgREST/postgrest)
+* [pgweb](https://sosedoff.github.io/pgweb/)
 
 ## Лицензия
 
