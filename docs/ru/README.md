@@ -21,7 +21,7 @@
 
 * Статус проекта: Реализован концепт
 
-[gin-pgfc] - golang библиотека для использования [pgfc](https://github.com/apisite/pgfc) в проектах на gin-gonic/
+[gin-pgfc](https://github.com/apisite/gin-pgfc) - golang библиотека для использования [pgfc](https://github.com/apisite/pgfc) в проектах на [gin-gonic](https://github.com/gin-gonic/gin).
 
 ## Использование
 
