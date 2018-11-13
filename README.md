@@ -14,5 +14,10 @@
 [gl1]: https://img.shields.io/github/license/apisite/gin-pgfc.svg
 [gl2]: LICENSE
 
+<p align="center">
+  <span>English</span> |
+  <a href="docs/ru/README.md">Pусский</a>
+</p>
+
 * Project status: in active development
 
